@@ -2,19 +2,19 @@
 
 ### Tools
 #### mitmproxy
-<a href="https://mitmproxy.org">mitmproxy</a> is an interactive console program that allows traffic flows to be intercepted, inspected, modified and replayed.
+[mitmproxy](https://mitmproxy.org) is an interactive console program that allows traffic flows to be intercepted, inspected, modified and replayed.
 
 ##### Installation
-Install mitmproxy on your machine using the <a href="http://docs.mitmproxy.org/en/latest/install.html">docs</a> from the mitmproxy site.
+Install mitmproxy on your machine using the [docs](http://docs.mitmproxy.org/en/latest/install.html) from the mitmproxy site.
 ###### macOS
-The recommended way to install mitmproxy on macOS is to use <a href="https://brew.sh">Homebrew</a>:
+The recommended way to install mitmproxy on macOS is to use [Homebrew](https://brew.sh):
 
 `brew install mitmproxy`
 
 ###### Windows
-The recommended way to install mitmproxy on Windows is to download the <a href="http://docs.mitmproxy.org/en/latest/install.html#binary-packages">Self-contained Pre-built Binary Packages</a> from mitmproxy's <a href="https://github.com/mitmproxy/mitmproxy/releases/tag/v2.0.2">releases</a> page.
+The recommended way to install mitmproxy on Windows is to download the [Self-contained Pre-built Binary Packages](http://docs.mitmproxy.org/en/latest/install.html#binary-packages) from mitmproxy's [releases](https://github.com/mitmproxy/mitmproxy/releases/tag/v2.0.2) page.
 
-After installation, you’ll find shortcuts for <a href="http://docs.mitmproxy.org/en/latest/mitmweb.html#mitmweb">mitmweb</a> (the web-based interface) and <a href="http://docs.mitmproxy.org/en/latest/mitmdump.html#mitmdump">mitmdump</a> in the start menu. Both executables are added to your PATH and can be invoked from the command line.
+After installation, you’ll find shortcuts for [mitmweb](http://docs.mitmproxy.org/en/latest/mitmweb.html#mitmweb) (the web-based interface) and [mitmdump](http://docs.mitmproxy.org/en/latest/mitmdump.html#mitmdump) in the start menu. Both executables are added to your PATH and can be invoked from the command line.
 
 ### API Mock Testing
 #### Start proxy
@@ -41,6 +41,9 @@ Setup your browser's proxy to use default mitmproxy port
 - Go to `Settings`, search for `Proxy`, then click `Open proxy settings`
 - This should open up your `Network Preferences`, click on HTTP and set to `127.0.0.1 : 8080`
 - Then click on HTTPS and set to `127.0.0.1 : 8080`
+
+###### Download certificate
+- Go to http://mitm.it/ to download the certificate and install on your browser
 
 ##### View request / response
 Run an API call through your configured browser to view the request / response
@@ -76,7 +79,8 @@ You can mock an API response by using **mitmdump**
 	`emulator -avd Pixel_API_26 -netdelay none -netspeed full -http-proxy http://127.0.0.1:8080`
 
 ##### Install mitmproxy certificate to device/emulator
-- http://mitm.it/
+- Go to http://mitm.it/ to download the certificate and install into the device/emulator
+OR 
 - Run mitmweb once to create ssl certificates in `.mitmproxy`
 - Copy and install `mitmproxy-ca-cert.cer` from `.mitmproxy` into the device/emulator
 
