@@ -1,0 +1,19 @@
+{
+  "code": 0,
+  "result": {
+    "requestId": 1457,
+    "country_code": 65,
+    "status": "WAITING",
+    "porting_number": "1241241",
+    "donor_network": {
+      "name": "Singtel",
+      "code": "003"
+    },
+    "auth_form_url": "https://www.circles.life/ownershipform.pdf",
+    "customer_id_number": null,
+    "owner_id_number": null,
+    "start_date": "2017-10-13T06:30:00.000Z",
+    "scheduled": true,
+    "available_activation_date": "2017-12-05T06:30:00.000Z"
+  }
+}
