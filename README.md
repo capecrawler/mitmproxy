@@ -45,25 +45,8 @@ Setup your browser's proxy to use default mitmproxy port
 ###### Download certificate
 - Go to http://mitm.it/ to download the certificate and install on your browser
 
-##### View request / response
-Run an API call through your configured browser to view the request / response
-
-*e.g.*
-Paste this in your browser URL and run:
-
-	`https://mccoy.circles.asia:6443/revision`
-
-- If you are running the **mitmproxy (console)**, you should see the requests and response in your console
-- If you are running **mitmweb**, you should see the requests and response in your browser using https://localhost:8081
-
-#### Mock API response
-You can mock an API response by using **mitmdump**
-
-- Run the python script in this repository (`scripts/rewrite.py`) to mock the `JSON` response
-
-	`mitmdump --host -s scripts/rewrite.py`
-
-#### Android
+----
+## Android
 ##### Run android emulator and use http-proxy:
 - Go to sdk tools
 
@@ -94,6 +77,46 @@ OR
 ##### Run the Android App
 - Run the updated Android app and update the JSON responses from `mock` folder for testing.
 
-#### iOS
-*<TO DO\>*
+----
 
+## iOS
+
+#### Make sure that certificate pinning is disabled in the iOS app source code
+#### For CirclesCare and CirclesTalk
+- Disable cert pinning in source code `LWTransportProvider.m` in `codebase`
+- Find the lines instantiating `AFSecurityPolicy` initialize `policyWithPinningMode` to `AFSSLPinningModeNone`
+- Make sure `securityPolicy.allowInvalidCertificates` is `NO` (false)
+
+##### iOS Simulator
+- Launch iOS Simulator
+- Drag and drop the mitm proxy pem file found at `~/.mitmproxy/mitmproxy-ca-cert.pem` to the iOS Simulator
+- Set machine's network settings proxy http and https to localhost:8080
+- Run `mitmproxy` in your machine
+- Run app
+
+##### iOS Device
+- Ensure that the machine and phone are connected in the same network
+- Update up phone's network proxy manually to `192.168.1.xxx` (machine's IP in the network) with port `8080`
+- Run `mitmproxy` in your machine
+- Access `http://mitm.it` and choose iOS to install certificate
+- Run app
+
+----
+
+## View request / response
+Run an API call through your configured browser to view the request / response
+
+*e.g.*
+Paste this in your browser URL and run:
+
+	`https://mccoy.circles.asia:6443/revision`
+
+- If you are running the **mitmproxy (console)**, you should see the requests and response in your console
+- If you are running **mitmweb**, you should see the requests and response in your browser using https://localhost:8081
+
+#### Mock API response
+You can mock an API response by using **mitmdump**
+
+- Run the python script in this repository (`scripts/rewrite.py`) to mock the `JSON` response
+
+	`mitmdump --host -s scripts/rewrite.py`
