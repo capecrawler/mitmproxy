@@ -39,12 +39,12 @@ def response(context, flow):
     # if flow.request.oldpath.startswith("/api/2/account/my/portin/request/active/"):
     # 	mockjson = open("mock/my_portin_request_active.json", "r")
     #     rewrite = True        
-    if flow.request.oldpath.startswith("/api/2/account/my/profile/details/get/"):
-    	mockjson = open("mock/my_profile_details_get.json", "r")
-        rewrite = True        
-    # if flow.request.oldpath.startswith("/api/2/account/batch/"):        
-    #     mockjson = open("mock/account_batch.json", "r")
-    #     rewrite = True
+    # if flow.request.oldpath.startswith("/api/2/account/my/profile/details/get/"):
+    # 	mockjson = open("mock/my_profile_details_get.json", "r")
+    #     rewrite = True        
+    if flow.request.oldpath.startswith("/api/2/account/batch/"):        
+        mockjson = open("mock/account_batch.json", "r")
+        rewrite = True
     
     if rewrite:
         time.sleep(0.3)
