@@ -63,7 +63,7 @@ Setup your browser's proxy to use default mitmproxy port
 
 ##### Install mitmproxy certificate to device/emulator
 - Go to http://mitm.it/ to download the certificate and install into the device/emulator
-OR 
+OR
 - Run mitmweb once to create ssl certificates in `.mitmproxy`
 - Copy and install `mitmproxy-ca-cert.cer` from `.mitmproxy` into the device/emulator
 
@@ -119,4 +119,5 @@ You can mock an API response by using **mitmdump**
 
 - Run the python script in this repository (`scripts/rewrite.py`) to mock the `JSON` response
 
-	`mitmdump --host -s scripts/rewrite.py`
+	Old Version (0.17) - `mitmdump --host -s scripts/rewrite.py`
+	New Version (2.0.2) - `mitmdump --host -s scripts/rewrite-2.0.2.py`
