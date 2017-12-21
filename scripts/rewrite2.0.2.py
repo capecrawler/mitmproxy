@@ -10,12 +10,12 @@ def request(flow):
     # if flow.request.path.endswith("/api/2/account/api/"):
     #     flow.request.path = "/api/2/account/myapitest"
     if flow.request.path.startswith("/api/2/account/my/profile/plan/circlesswitch/upgrade/"):
-        rewrite = True
+        rewrite = False
     if flow.request.path.startswith("/api/2/account/my/profile/id/digits/verify/get/"):
         mockresp = open("mock/my_profile_id_digits_verify_get.json", "r").read()
-        rewrite = True
+        rewrite = False
     if flow.request.path.startswith("/api/2/account/my/portin/request/cancel/"):
-        rewrite = True
+        rewrite = False
 
     print("\nRequest : " + str(flow.request.oldpath)+"\n")
     # print("Request Rewrite : " + str(flow.request.path)+"\n")
