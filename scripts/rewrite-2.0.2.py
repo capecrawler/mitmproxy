@@ -48,7 +48,7 @@ def response(flow: http.HTTPFlow) -> None:
 
 
 
- '''           
+```        
     #rewrite = False
 
     # if flow.request.oldpath.endswith("/revision?"):
@@ -73,4 +73,4 @@ def rewrite(flow: http.HTTPFlow,mockjson: bytes):
     flow.response.reason = "OK";
     flow.response.status_code = 200;
     print("\nResponse Tuype: " + str(flow.response.content)+"\n")
-    ```
+```

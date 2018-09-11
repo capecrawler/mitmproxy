@@ -1,0 +1,167 @@
+[
+  {
+    "id": 190,
+    "business_id": 5142,
+    "new_member_point": 0,
+    "program_revision": 9,
+    "status": "ACTIVE",
+    "inactive_since": null,
+    "reset_since": null,
+    "created_at": "2018-05-14T02:56:03.732Z",
+    "created_by": "Mario  Cape",
+    "updated_at": "2018-08-29T06:35:01.793Z",
+    "updated_by": "Mario  Cape",
+    "deleted_at": null,
+    "deleted_by": null,
+    "synchronized_at": "2018-06-21T06:35:01.793Z",
+    "is_sent_validation_code": false,
+    "earning_rules": [
+      {
+        "id": 189,
+        "type": "ITEM",
+        "point": 10,
+        "amount": null,
+        "item_rules": [
+          {            
+            "type": "ITEM_VARIANT",
+            "category_name": null,
+            "item_name": "Tea",
+            "item_variant_names": [
+              "small",
+              "medium"
+            ]
+          },
+          {            
+            "type": "ITEM",
+            "category_name": null,
+            "item_name": "Croissant",
+            "item_variant_names": [
+              "*"
+            ]
+          },
+          {
+            "type": "CATEGORY",
+            "category_name": "Coffee",
+            "item_name": null,
+            "item_variant_names": null
+          }
+        ],
+      }
+    ],
+    "rewards": [
+      {
+        "id": 820,
+        "reward_type": "TOTAL_SALES",
+        "discount": 2.00,
+        "discount_type": "PERCENTAGE",
+        "max_discount_amount": null,
+        "min_purchase_amount": null,
+        "created_at": "2018-05-14T02:56:03.732Z",
+        "created_by": "Mario  Cape",
+        "updated_at": "2018-06-21T06:35:01.793Z",
+        "updated_by": "Mario  Cape",
+        "deleted_at": null,
+        "deleted_by": null,
+        "synchronized_at": "2018-06-21T06:35:01.793Z",
+        "reward_items": null,
+        "redeem_point": 10,
+        "is_deleted": false
+      },
+      {
+        "id": 821,
+        "reward_type": "ITEM",
+        "discount": 100.00,
+        "discount_type": "PERCENTAGE",
+        "max_discount_amount": null,
+        "min_purchase_amount": null,
+        "created_at": "2018-05-14T02:56:03.732Z",
+        "created_by": "Mario  Cape",
+        "updated_at": "2018-06-21T06:35:01.793Z",
+        "updated_by": "Mario  Cape",
+        "deleted_at": null,
+        "deleted_by": null,
+        "synchronized_at": "2018-06-21T06:35:01.793Z",
+        "reward_items": [
+          {
+            "id": 402,
+            "type": "ITEM",
+            "category_name": null,
+            "item_name": "Milo",
+            "item_variant_names": [
+              "*"
+            ]
+          }
+        ],
+        "redeem_point": 10,
+        "is_deleted": false
+      },
+      {
+        "id": 822,
+        "reward_type": "ITEM",
+        "discount": 50.00,
+        "discount_type": "PERCENTAGE",
+        "max_discount_amount": null,
+        "min_purchase_amount": null,
+        "created_at": "2018-05-14T02:56:03.732Z",
+        "created_by": "Mario  Cape",
+        "updated_at": "2018-06-21T06:35:01.793Z",
+        "updated_by": "Mario  Cape",
+        "deleted_at": null,
+        "deleted_by": null,
+        "synchronized_at": "2018-06-21T06:35:01.793Z",
+        "reward_items": [
+          {
+            "id": 403,
+            "type": "ITEM",
+            "category_name": null,
+            "item_name": "Milo",
+            "item_variant_names": [
+              "*"
+            ]
+          }
+        ],
+        "redeem_point": 5,
+        "is_deleted": false
+      },
+      {
+        "id": 825,
+        "reward_type": "ITEM",
+        "discount": 100.00,
+        "discount_type": "PERCENTAGE",
+        "max_discount_amount": null,
+        "min_purchase_amount": null,
+        "created_at": "2018-05-14T02:56:03.732Z",
+        "created_by": "Mario  Cape",
+        "updated_at": "2018-06-21T06:35:01.793Z",
+        "updated_by": "Mario  Cape",
+        "deleted_at": null,
+        "deleted_by": null,
+        "synchronized_at": "2018-06-21T06:35:01.793Z",
+        "reward_items": [
+          {
+            "id": 406,
+            "type": "ITEM_VARIANT",
+            "category_name": null,
+            "item_name": "Tea",
+            "item_variant_names": [
+              "small",
+              "medium"
+            ]
+          },
+          {
+            "id": 407,
+            "type": "ITEM",
+            "category_name": null,
+            "item_name": "Tinapay",
+            "item_variant_names": [
+              "*"
+            ]
+          }
+        ],
+        "redeem_point": 25,
+        "is_deleted": false
+      }
+    ],
+    "is_deleted": false
+  }
+]

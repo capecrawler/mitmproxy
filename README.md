@@ -82,8 +82,7 @@ OR
 ## iOS
 
 #### Make sure that certificate pinning is disabled in the iOS app source code
-#### For CirclesCare and CirclesTalk
-- Disable cert pinning in source code `LWTransportProvider.m` in `codebase`
+#### For AFNetworking
 - Find the lines instantiating `AFSecurityPolicy` initialize `policyWithPinningMode` to `AFSSLPinningModeNone`
 - Make sure `securityPolicy.allowInvalidCertificates` is `NO` (false)
 
@@ -106,10 +105,6 @@ OR
 ## View request / response
 Run an API call through your configured browser to view the request / response
 
-*e.g.*
-Paste this in your browser URL and run:
-
-	`https://mccoy.circles.asia:6443/revision`
 
 - If you are running the **mitmproxy (console)**, you should see the requests and response in your console
 - If you are running **mitmweb**, you should see the requests and response in your browser using https://localhost:8081
@@ -117,7 +112,6 @@ Paste this in your browser URL and run:
 #### Mock API response
 You can mock an API response by using **mitmdump**
 
-- Run the python script in this repository (`scripts/rewrite.py`) to mock the `JSON` response
-
-	Old Version (0.17) - `mitmdump --host -s scripts/rewrite.py`
-	New Version (2.0.2) - `mitmdump --host -s scripts/rewrite-2.0.2.py`
+- Run the python script in this repository (`scripts/intercept_requests.py`) to mock the `JSON` response
+	
+	New Version (2.0.2) - `mitmdump -s scripts/intercept_requests.py`

@@ -1,4 +1,4 @@
-from mitmproxy.models import HTTPResponse
+from mitmproxy.http import HTTPResponse
 from netlib.http import Headers
 import time
 
@@ -34,7 +34,7 @@ def response(context, flow):
     rewrite = False
 
     if flow.request.oldpath.endswith("/revision?"):
-    	mockjson = open("mock/revision.json", "r")
+        mockjson = open("mock/revision.json", "r")
         rewrite = True        
     # if flow.request.oldpath.startswith("/api/2/account/my/portin/request/active/"):
     # 	mockjson = open("mock/my_portin_request_active.json", "r")
@@ -42,8 +42,8 @@ def response(context, flow):
     # if flow.request.oldpath.startswith("/api/2/account/my/profile/details/get/"):
     # 	mockjson = open("mock/my_profile_details_get.json", "r")
     #     rewrite = True        
-    if flow.request.oldpath.startswith("/api/2/account/batch/"):        
-        mockjson = open("mock/account_batch.json", "r")
+    if flow.request.oldpath.startswith("/loyalty/v2/programs"):        
+        mockjson = open("mock/loyalty_program.json", "r")
         rewrite = True
     
     if rewrite:
